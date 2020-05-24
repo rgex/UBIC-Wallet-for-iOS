@@ -1,0 +1,1025 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A37A78323533569002838C3 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97122F234E8903001DD940 /* libcrypto.a */; };
+		7A37A78623533E31002838C3 /* OCWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97122B234E8450001DD940 /* OCWrapper.h */; };
+		7A37A78723533E31002838C3 /* cleanse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712CB2350F419001DD940 /* cleanse.cpp */; };
+		7A37A78823533E31002838C3 /* cleanse.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712CA2350F419001DD940 /* cleanse.h */; };
+		7A37A78923533E31002838C3 /* zeroafterfree.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712CD2350F420001DD940 /* zeroafterfree.h */; };
+		7A37A78A23533E31002838C3 /* AddCertificateScript.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712C52350F3B4001DD940 /* AddCertificateScript.h */; };
+		7A37A78B23533E31002838C3 /* DeactivateCertificateScript.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712C42350F3B4001DD940 /* DeactivateCertificateScript.h */; };
+		7A37A78C23533E31002838C3 /* KycRequestScript.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712C72350F3B4001DD940 /* KycRequestScript.h */; };
+		7A37A78D23533E31002838C3 /* NtpskAlreadyUsedScript.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712C62350F3B4001DD940 /* NtpskAlreadyUsedScript.h */; };
+		7A37A78E23533E31002838C3 /* PkhInScript.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712C32350F3B4001DD940 /* PkhInScript.h */; };
+		7A37A78F23533E31002838C3 /* UScript.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712C22350F3B4001DD940 /* UScript.h */; };
+		7A37A79023533E31002838C3 /* NtpRsk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712BF2350F381001DD940 /* NtpRsk.cpp */; };
+		7A37A79123533E31002838C3 /* NtpRsk.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712BD2350F381001DD940 /* NtpRsk.h */; };
+		7A37A79223533E31002838C3 /* NtpRskSignatureRequestObject.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712BC2350F381001DD940 /* NtpRskSignatureRequestObject.h */; };
+		7A37A79323533E31002838C3 /* NtpRskSignatureVerificationObject.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712BE2350F381001DD940 /* NtpRskSignatureVerificationObject.h */; };
+		7A37A79423533E31002838C3 /* NtpEsk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B92350F34F001DD940 /* NtpEsk.cpp */; };
+		7A37A79523533E31002838C3 /* NtpEsk.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B62350F34F001DD940 /* NtpEsk.h */; };
+		7A37A79623533E31002838C3 /* NtpEskSignatureRequestObject.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B82350F34F001DD940 /* NtpEskSignatureRequestObject.h */; };
+		7A37A79723533E31002838C3 /* NtpEskSignatureVerificationObject.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B72350F34F001DD940 /* NtpEskSignatureVerificationObject.h */; };
+		7A37A79823533E31002838C3 /* Hexdump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B02350F31B001DD940 /* Hexdump.cpp */; };
+		7A37A79923533E31002838C3 /* Hexdump.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B22350F31B001DD940 /* Hexdump.h */; };
+		7A37A79A23533E31002838C3 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712B12350F31B001DD940 /* Log.cpp */; };
+		7A37A79B23533E31002838C3 /* Log.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712AF2350F31B001DD940 /* Log.h */; };
+		7A37A79C23533E31002838C3 /* FS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712AC2350F2E3001DD940 /* FS.cpp */; };
+		7A37A79D23533E31002838C3 /* FS.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712AB2350F2E3001DD940 /* FS.h */; };
+		7A37A79E23533E31002838C3 /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712972350F045001DD940 /* Transaction.cpp */; };
+		7A37A79F23533E31002838C3 /* Transaction.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712922350F045001DD940 /* Transaction.h */; };
+		7A37A7A023533E31002838C3 /* TransactionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712952350F045001DD940 /* TransactionHelper.cpp */; };
+		7A37A7A123533E31002838C3 /* TransactionHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712962350F045001DD940 /* TransactionHelper.h */; };
+		7A37A7A223533E31002838C3 /* TxIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712982350F045001DD940 /* TxIn.cpp */; };
+		7A37A7A323533E31002838C3 /* TxIn.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712912350F045001DD940 /* TxIn.h */; };
+		7A37A7A423533E31002838C3 /* TxOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712942350F045001DD940 /* TxOut.cpp */; };
+		7A37A7A523533E31002838C3 /* TxOut.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712932350F045001DD940 /* TxOut.h */; };
+		7A37A7A623533E31002838C3 /* CreateSignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712822350EFF5001DD940 /* CreateSignature.cpp */; };
+		7A37A7A723533E31002838C3 /* CreateSignature.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712792350EFF5001DD940 /* CreateSignature.h */; };
+		7A37A7A823533E31002838C3 /* ECCtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A97127E2350EFF5001DD940 /* ECCtools.cpp */; };
+		7A37A7A923533E31002838C3 /* ECCtools.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97127D2350EFF5001DD940 /* ECCtools.h */; };
+		7A37A7AA23533E31002838C3 /* Hash160.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712832350EFF6001DD940 /* Hash160.cpp */; };
+		7A37A7AB23533E31002838C3 /* Hash160.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712852350EFF6001DD940 /* Hash160.h */; };
+		7A37A7AC23533E31002838C3 /* Hash256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A97127A2350EFF5001DD940 /* Hash256.cpp */; };
+		7A37A7AD23533E31002838C3 /* Hash256.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712782350EFF5001DD940 /* Hash256.h */; };
+		7A37A7AE23533E31002838C3 /* PassportCrypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712842350EFF6001DD940 /* PassportCrypto.cpp */; };
+		7A37A7AF23533E31002838C3 /* PassportCrypto.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97127F2350EFF5001DD940 /* PassportCrypto.h */; };
+		7A37A7B023533E31002838C3 /* Ripemd160.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712812350EFF5001DD940 /* Ripemd160.cpp */; };
+		7A37A7B123533E31002838C3 /* Ripemd160.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712802350EFF5001DD940 /* Ripemd160.h */; };
+		7A37A7B223533E31002838C3 /* Sha256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712862350EFF6001DD940 /* Sha256.cpp */; };
+		7A37A7B323533E31002838C3 /* Sha256.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712872350EFF6001DD940 /* Sha256.h */; };
+		7A37A7B423533E31002838C3 /* VerifySignature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A97127C2350EFF5001DD940 /* VerifySignature.cpp */; };
+		7A37A7B523533E31002838C3 /* VerifySignature.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97127B2350EFF5001DD940 /* VerifySignature.h */; };
+		7A37A7B623533E31002838C3 /* PKCS7Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A97126F2350E29F001DD940 /* PKCS7Parser.cpp */; };
+		7A37A7B723533E31002838C3 /* PKCS7Parser.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712702350E29F001DD940 /* PKCS7Parser.h */; };
+		7A37A7B823533E31002838C3 /* LDSParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712732350E2A5001DD940 /* LDSParser.cpp */; };
+		7A37A7B923533E31002838C3 /* LDSParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712722350E2A5001DD940 /* LDSParser.h */; };
+		7A37A7BA23533E31002838C3 /* Cert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9712692350E214001DD940 /* Cert.cpp */; };
+		7A37A7BB23533E31002838C3 /* Cert.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97126A2350E214001DD940 /* Cert.h */; };
+		7A37A7BC23533E31002838C3 /* Address.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A971212234D3107001DD940 /* Address.cpp */; };
+		7A37A7BD23533E31002838C3 /* Address.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711FD234D3105001DD940 /* Address.h */; };
+		7A37A7BE23533E31002838C3 /* AddressHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711FF234D3105001DD940 /* AddressHelper.h */; };
+		7A37A7BF23533E31002838C3 /* Base58.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A971206234D3106001DD940 /* Base58.cpp */; };
+		7A37A7C023533E31002838C3 /* Base58.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971204234D3106001DD940 /* Base58.h */; };
+		7A37A7C123533E31002838C3 /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711FB234D3105001DD940 /* Base64.cpp */; };
+		7A37A7C223533E31002838C3 /* Base64.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971202234D3105001DD940 /* Base64.h */; };
+		7A37A7C323533E31002838C3 /* ChainParams.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971207234D3106001DD940 /* ChainParams.h */; };
+		7A37A7C423533E31002838C3 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711FE234D3105001DD940 /* Config.cpp */; };
+		7A37A7C523533E31002838C3 /* Config.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971216234D3108001DD940 /* Config.h */; };
+		7A37A7C623533E31002838C3 /* Nativelib.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A78423533C28002838C3 /* Nativelib.h */; };
+		7A37A7C723533E31002838C3 /* Nativelib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A971210234D3107001DD940 /* Nativelib.cpp */; };
+		7A37A7C823533E31002838C3 /* prevector.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971200234D3105001DD940 /* prevector.h */; };
+		7A37A7C923533E31002838C3 /* serialize.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971205234D3106001DD940 /* serialize.h */; };
+		7A37A7CA23533E31002838C3 /* streams.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971203234D3105001DD940 /* streams.h */; };
+		7A37A7CB23533E31002838C3 /* UAmount.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97120A234D3106001DD940 /* UAmount.h */; };
+		7A37A7CC23533E31002838C3 /* Wallet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A971215234D3107001DD940 /* Wallet.cpp */; };
+		7A37A7CD23533E31002838C3 /* Wallet.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97120F234D3107001DD940 /* Wallet.h */; };
+		7A37A7CE23533E31002838C3 /* UBIC Wallet-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711FA234D3103001DD940 /* UBIC Wallet-Bridging-Header.h */; };
+		7A37A7CF23533E31002838C3 /* PrivateKeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711F32349FBCA001DD940 /* PrivateKeyGenerator.swift */; };
+		7A37A7D023533E31002838C3 /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711F52349FBE4001DD940 /* KeyStore.swift */; };
+		7A37A7D123533E31002838C3 /* CGColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E723475280001DD940 /* CGColorExtension.swift */; };
+		7A37A7D223533E31002838C3 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E523475280001DD940 /* CGImageExtension.swift */; };
+		7A37A7D323533E31002838C3 /* GitHubIdenticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E323475280001DD940 /* GitHubIdenticon.swift */; };
+		7A37A7D423533E31002838C3 /* IconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E223475280001DD940 /* IconGenerator.swift */; };
+		7A37A7D523533E31002838C3 /* Identicon.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E623475280001DD940 /* Identicon.h */; };
+		7A37A7D623533E31002838C3 /* Identicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E823475280001DD940 /* Identicon.swift */; };
+		7A37A7D723533E31002838C3 /* JenkinsHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711E423475280001DD940 /* JenkinsHash.swift */; };
+		7A37A7D823533E31002838C3 /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5949702318898500FBFFDC /* GetBalance.swift */; };
+		7A37A7D923533E31002838C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5949572317016400FBFFDC /* AppDelegate.swift */; };
+		7A37A7DA23533E31002838C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5949592317016400FBFFDC /* SceneDelegate.swift */; };
+		7A37A7DB23533E31002838C3 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59495D2317016400FBFFDC /* SendViewController.swift */; };
+		7A37A7DC23533E31002838C3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711EF23475961001DD940 /* TabBarController.swift */; };
+		7A37A7E123533E31002838C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A59496D231888DF00FBFFDC /* HomeViewController.swift */; };
+		7A37A7E223533E31002838C3 /* PrivateKeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9711DF23474B9E001DD940 /* PrivateKeysViewController.swift */; };
+		7A37A7E52353806D002838C3 /* SwiftWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A7E323537CE8002838C3 /* SwiftWrapper.swift */; };
+		7A37A7E62353807D002838C3 /* OCWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A971229234E8433001DD940 /* OCWrapper.mm */; };
+		7A37A7E82353A5A0002838C3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A7E72353A5A0002838C3 /* Extensions.swift */; };
+		7A37A7EA2357B1F3002838C3 /* GetTransactionFees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A7E92357B1F3002838C3 /* GetTransactionFees.swift */; };
+		7A37A7EC2357DA15002838C3 /* SendTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A7EB2357DA15002838C3 /* SendTransaction.swift */; };
+		7A37A7EE235A20D8002838C3 /* BalanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A7ED235A20D8002838C3 /* BalanceCollectionViewCell.swift */; };
+		7A37A7F0235E7A1F002838C3 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A7EF235E7A1F002838C3 /* CurrencyFormatter.swift */; };
+		7A5122F223B963C7005AD1B0 /* ChallengeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5122F123B963C7005AD1B0 /* ChallengeParser.swift */; };
+		7A5122F423B97EE8005AD1B0 /* NFCScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5122F323B97EE8005AD1B0 /* NFCScanResultViewController.swift */; };
+		7A5949612317016400FBFFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A59495F2317016400FBFFDC /* Main.storyboard */; };
+		7A5949632317016500FBFFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5949622317016500FBFFDC /* Assets.xcassets */; };
+		7A5949662317016500FBFFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5949642317016500FBFFDC /* LaunchScreen.storyboard */; };
+		7A96719B23B3E5D4006DAA0E /* PassportInformationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96719A23B3E5D4006DAA0E /* PassportInformationInputViewController.swift */; };
+		7A9671AB23B3EDCE006DAA0E /* PassportCryptoWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671A023B3EDCD006DAA0E /* PassportCryptoWrapper.swift */; };
+		7A9671AD23B3EDCE006DAA0E /* OCPCWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671A423B3EDCE006DAA0E /* OCPCWrapper.mm */; };
+		7A9671AE23B3EDCE006DAA0E /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671A523B3EDCE006DAA0E /* Reader.swift */; };
+		7A9671AF23B3EDCE006DAA0E /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671A623B3EDCE006DAA0E /* Tools.swift */; };
+		7A9671B023B3EDCE006DAA0E /* BacKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671A723B3EDCE006DAA0E /* BacKeys.swift */; };
+		7A9671B623B3EDF6006DAA0E /* LDSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671B323B3EDF5006DAA0E /* LDSParser.swift */; };
+		7A9671B723B3EDF6006DAA0E /* MRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671B423B3EDF5006DAA0E /* MRZParser.swift */; };
+		7A9671B823B3EDF6006DAA0E /* Iso19794Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671B523B3EDF5006DAA0E /* Iso19794Parser.swift */; };
+		7A9671BB23B3EE1A006DAA0E /* PassportDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9671BA23B3EE1A006DAA0E /* PassportDataFormatter.swift */; };
+		7AA36FEB236A2BF20068E6A6 /* ImportPrivateKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA36FEA236A2BF20068E6A6 /* ImportPrivateKeyViewController.swift */; };
+		7AA36FED236C42EF0068E6A6 /* MyUBIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA36FEC236C42EF0068E6A6 /* MyUBIViewController.swift */; };
+		7AA36FEF236C43460068E6A6 /* PrivateKeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA36FEE236C43460068E6A6 /* PrivateKeyCollectionViewCell.swift */; };
+		7AE0A994236DB1C000570396 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE0A993236DB1C000570396 /* TransactionViewController.swift */; };
+		7AE0A996236DB2B200570396 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE0A995236DB2B200570396 /* TransactionCollectionViewCell.swift */; };
+		7AE4845D2367A10100699CCA /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4845C2367A10100699CCA /* ReceiveViewController.swift */; };
+		7AEA098723B7D6FE0026536F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA098623B7D6FE0026536F /* QRScannerController.swift */; };
+		7AFDA36323AF0C6800774CFA /* SelectCurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */; };
+		7AFDA36523AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A37A78423533C28002838C3 /* Nativelib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nativelib.h; sourceTree = "<group>"; };
+		7A37A7E323537CE8002838C3 /* SwiftWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWrapper.swift; sourceTree = "<group>"; };
+		7A37A7E72353A5A0002838C3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7A37A7E92357B1F3002838C3 /* GetTransactionFees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionFees.swift; sourceTree = "<group>"; };
+		7A37A7EB2357DA15002838C3 /* SendTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransaction.swift; sourceTree = "<group>"; };
+		7A37A7ED235A20D8002838C3 /* BalanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A37A7EF235E7A1F002838C3 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		7A5122F123B963C7005AD1B0 /* ChallengeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeParser.swift; sourceTree = "<group>"; };
+		7A5122F323B97EE8005AD1B0 /* NFCScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanResultViewController.swift; sourceTree = "<group>"; };
+		7A5122F523B9AE42005AD1B0 /* UBIC Wallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UBIC Wallet.entitlements"; sourceTree = "<group>"; };
+		7A5949542317016400FBFFDC /* UBIC Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UBIC Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5949572317016400FBFFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A5949592317016400FBFFDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7A59495D2317016400FBFFDC /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		7A5949602317016400FBFFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A5949622317016500FBFFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A5949652317016500FBFFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A5949672317016500FBFFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A59496D231888DF00FBFFDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7A5949702318898500FBFFDC /* GetBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBalance.swift; sourceTree = "<group>"; };
+		7A96719A23B3E5D4006DAA0E /* PassportInformationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportInformationInputViewController.swift; sourceTree = "<group>"; };
+		7A9671A023B3EDCD006DAA0E /* PassportCryptoWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCryptoWrapper.swift; sourceTree = "<group>"; };
+		7A9671A323B3EDCE006DAA0E /* TestPass-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestPass-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A9671A423B3EDCE006DAA0E /* OCPCWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCPCWrapper.mm; sourceTree = "<group>"; };
+		7A9671A523B3EDCE006DAA0E /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		7A9671A623B3EDCE006DAA0E /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		7A9671A723B3EDCE006DAA0E /* BacKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BacKeys.swift; sourceTree = "<group>"; };
+		7A9671A923B3EDCE006DAA0E /* OCPCWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPCWrapper.h; sourceTree = "<group>"; };
+		7A9671B323B3EDF5006DAA0E /* LDSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDSParser.swift; sourceTree = "<group>"; };
+		7A9671B423B3EDF5006DAA0E /* MRZParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRZParser.swift; sourceTree = "<group>"; };
+		7A9671B523B3EDF5006DAA0E /* Iso19794Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iso19794Parser.swift; sourceTree = "<group>"; };
+		7A9671BA23B3EE1A006DAA0E /* PassportDataFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportDataFormatter.swift; sourceTree = "<group>"; };
+		7A9711DF23474B9E001DD940 /* PrivateKeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeysViewController.swift; sourceTree = "<group>"; };
+		7A9711E223475280001DD940 /* IconGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGenerator.swift; sourceTree = "<group>"; };
+		7A9711E323475280001DD940 /* GitHubIdenticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubIdenticon.swift; sourceTree = "<group>"; };
+		7A9711E423475280001DD940 /* JenkinsHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JenkinsHash.swift; sourceTree = "<group>"; };
+		7A9711E523475280001DD940 /* CGImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
+		7A9711E623475280001DD940 /* Identicon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Identicon.h; sourceTree = "<group>"; };
+		7A9711E723475280001DD940 /* CGColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColorExtension.swift; sourceTree = "<group>"; };
+		7A9711E823475280001DD940 /* Identicon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identicon.swift; sourceTree = "<group>"; };
+		7A9711EF23475961001DD940 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7A9711F32349FBCA001DD940 /* PrivateKeyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyGenerator.swift; sourceTree = "<group>"; };
+		7A9711F52349FBE4001DD940 /* KeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStore.swift; sourceTree = "<group>"; };
+		7A9711FA234D3103001DD940 /* UBIC Wallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBIC Wallet-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A9711FB234D3105001DD940 /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64.cpp; sourceTree = "<group>"; };
+		7A9711FD234D3105001DD940 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		7A9711FE234D3105001DD940 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		7A9711FF234D3105001DD940 /* AddressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressHelper.h; sourceTree = "<group>"; };
+		7A971200234D3105001DD940 /* prevector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prevector.h; sourceTree = "<group>"; };
+		7A971202234D3105001DD940 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		7A971203234D3105001DD940 /* streams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streams.h; sourceTree = "<group>"; };
+		7A971204234D3106001DD940 /* Base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base58.h; sourceTree = "<group>"; };
+		7A971205234D3106001DD940 /* serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialize.h; sourceTree = "<group>"; };
+		7A971206234D3106001DD940 /* Base58.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base58.cpp; sourceTree = "<group>"; };
+		7A971207234D3106001DD940 /* ChainParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainParams.h; sourceTree = "<group>"; };
+		7A97120A234D3106001DD940 /* UAmount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAmount.h; sourceTree = "<group>"; };
+		7A97120F234D3107001DD940 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		7A971210234D3107001DD940 /* Nativelib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Nativelib.cpp; sourceTree = "<group>"; };
+		7A971212234D3107001DD940 /* Address.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Address.cpp; sourceTree = "<group>"; };
+		7A971215234D3107001DD940 /* Wallet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wallet.cpp; sourceTree = "<group>"; };
+		7A971216234D3108001DD940 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		7A971229234E8433001DD940 /* OCWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCWrapper.mm; sourceTree = "<group>"; };
+		7A97122B234E8450001DD940 /* OCWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCWrapper.h; sourceTree = "<group>"; };
+		7A97122C234E88C3001DD940 /* OpenSSL */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenSSL; sourceTree = "<group>"; };
+		7A97122F234E8903001DD940 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = OpenSSL/lib/libcrypto.a; sourceTree = "<group>"; };
+		7A9712692350E214001DD940 /* Cert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cert.cpp; sourceTree = "<group>"; };
+		7A97126A2350E214001DD940 /* Cert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cert.h; sourceTree = "<group>"; };
+		7A97126F2350E29F001DD940 /* PKCS7Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PKCS7Parser.cpp; sourceTree = "<group>"; };
+		7A9712702350E29F001DD940 /* PKCS7Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKCS7Parser.h; sourceTree = "<group>"; };
+		7A9712722350E2A5001DD940 /* LDSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDSParser.h; sourceTree = "<group>"; };
+		7A9712732350E2A5001DD940 /* LDSParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LDSParser.cpp; sourceTree = "<group>"; };
+		7A9712782350EFF5001DD940 /* Hash256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash256.h; sourceTree = "<group>"; };
+		7A9712792350EFF5001DD940 /* CreateSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSignature.h; sourceTree = "<group>"; };
+		7A97127A2350EFF5001DD940 /* Hash256.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hash256.cpp; sourceTree = "<group>"; };
+		7A97127B2350EFF5001DD940 /* VerifySignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifySignature.h; sourceTree = "<group>"; };
+		7A97127C2350EFF5001DD940 /* VerifySignature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VerifySignature.cpp; sourceTree = "<group>"; };
+		7A97127D2350EFF5001DD940 /* ECCtools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCtools.h; sourceTree = "<group>"; };
+		7A97127E2350EFF5001DD940 /* ECCtools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ECCtools.cpp; sourceTree = "<group>"; };
+		7A97127F2350EFF5001DD940 /* PassportCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassportCrypto.h; sourceTree = "<group>"; };
+		7A9712802350EFF5001DD940 /* Ripemd160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ripemd160.h; sourceTree = "<group>"; };
+		7A9712812350EFF5001DD940 /* Ripemd160.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ripemd160.cpp; sourceTree = "<group>"; };
+		7A9712822350EFF5001DD940 /* CreateSignature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreateSignature.cpp; sourceTree = "<group>"; };
+		7A9712832350EFF6001DD940 /* Hash160.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hash160.cpp; sourceTree = "<group>"; };
+		7A9712842350EFF6001DD940 /* PassportCrypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassportCrypto.cpp; sourceTree = "<group>"; };
+		7A9712852350EFF6001DD940 /* Hash160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash160.h; sourceTree = "<group>"; };
+		7A9712862350EFF6001DD940 /* Sha256.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sha256.cpp; sourceTree = "<group>"; };
+		7A9712872350EFF6001DD940 /* Sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sha256.h; sourceTree = "<group>"; };
+		7A9712912350F045001DD940 /* TxIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TxIn.h; sourceTree = "<group>"; };
+		7A9712922350F045001DD940 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		7A9712932350F045001DD940 /* TxOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TxOut.h; sourceTree = "<group>"; };
+		7A9712942350F045001DD940 /* TxOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TxOut.cpp; sourceTree = "<group>"; };
+		7A9712952350F045001DD940 /* TransactionHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransactionHelper.cpp; sourceTree = "<group>"; };
+		7A9712962350F045001DD940 /* TransactionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionHelper.h; sourceTree = "<group>"; };
+		7A9712972350F045001DD940 /* Transaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transaction.cpp; sourceTree = "<group>"; };
+		7A9712982350F045001DD940 /* TxIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TxIn.cpp; sourceTree = "<group>"; };
+		7A9712AB2350F2E3001DD940 /* FS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FS.h; sourceTree = "<group>"; };
+		7A9712AC2350F2E3001DD940 /* FS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FS.cpp; sourceTree = "<group>"; };
+		7A9712AF2350F31B001DD940 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		7A9712B02350F31B001DD940 /* Hexdump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hexdump.cpp; sourceTree = "<group>"; };
+		7A9712B12350F31B001DD940 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		7A9712B22350F31B001DD940 /* Hexdump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hexdump.h; sourceTree = "<group>"; };
+		7A9712B62350F34F001DD940 /* NtpEsk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NtpEsk.h; sourceTree = "<group>"; };
+		7A9712B72350F34F001DD940 /* NtpEskSignatureVerificationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NtpEskSignatureVerificationObject.h; sourceTree = "<group>"; };
+		7A9712B82350F34F001DD940 /* NtpEskSignatureRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NtpEskSignatureRequestObject.h; sourceTree = "<group>"; };
+		7A9712B92350F34F001DD940 /* NtpEsk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NtpEsk.cpp; sourceTree = "<group>"; };
+		7A9712BC2350F381001DD940 /* NtpRskSignatureRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NtpRskSignatureRequestObject.h; sourceTree = "<group>"; };
+		7A9712BD2350F381001DD940 /* NtpRsk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NtpRsk.h; sourceTree = "<group>"; };
+		7A9712BE2350F381001DD940 /* NtpRskSignatureVerificationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NtpRskSignatureVerificationObject.h; sourceTree = "<group>"; };
+		7A9712BF2350F381001DD940 /* NtpRsk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NtpRsk.cpp; sourceTree = "<group>"; };
+		7A9712C22350F3B4001DD940 /* UScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UScript.h; sourceTree = "<group>"; };
+		7A9712C32350F3B4001DD940 /* PkhInScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PkhInScript.h; sourceTree = "<group>"; };
+		7A9712C42350F3B4001DD940 /* DeactivateCertificateScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeactivateCertificateScript.h; sourceTree = "<group>"; };
+		7A9712C52350F3B4001DD940 /* AddCertificateScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCertificateScript.h; sourceTree = "<group>"; };
+		7A9712C62350F3B4001DD940 /* NtpskAlreadyUsedScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NtpskAlreadyUsedScript.h; sourceTree = "<group>"; };
+		7A9712C72350F3B4001DD940 /* KycRequestScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KycRequestScript.h; sourceTree = "<group>"; };
+		7A9712CA2350F419001DD940 /* cleanse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cleanse.h; sourceTree = "<group>"; };
+		7A9712CB2350F419001DD940 /* cleanse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cleanse.cpp; sourceTree = "<group>"; };
+		7A9712CD2350F420001DD940 /* zeroafterfree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zeroafterfree.h; sourceTree = "<group>"; };
+		7AA36FEA236A2BF20068E6A6 /* ImportPrivateKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPrivateKeyViewController.swift; sourceTree = "<group>"; };
+		7AA36FEC236C42EF0068E6A6 /* MyUBIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUBIViewController.swift; sourceTree = "<group>"; };
+		7AA36FEE236C43460068E6A6 /* PrivateKeyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyCollectionViewCell.swift; sourceTree = "<group>"; };
+		7AE0A993236DB1C000570396 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		7AE0A995236DB2B200570396 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
+		7AE4845C2367A10100699CCA /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		7AEA098623B7D6FE0026536F /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyTextField.swift; sourceTree = "<group>"; };
+		7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPassportCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A5949512317016400FBFFDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A37A78323533569002838C3 /* libcrypto.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A5122F023B963A7005AD1B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7A5122F123B963C7005AD1B0 /* ChallengeParser.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7A59494B2317016400FBFFDC = {
+			isa = PBXGroup;
+			children = (
+				7A97122C234E88C3001DD940 /* OpenSSL */,
+				7A5949562317016400FBFFDC /* UBIC Wallet */,
+				7A5949552317016400FBFFDC /* Products */,
+				7A97122E234E8902001DD940 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A5949552317016400FBFFDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A5949542317016400FBFFDC /* UBIC Wallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A5949562317016400FBFFDC /* UBIC Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				7A5122F523B9AE42005AD1B0 /* UBIC Wallet.entitlements */,
+				7A5122F023B963A7005AD1B0 /* Utils */,
+				7A96719F23B3EBE7006DAA0E /* PassportReader */,
+				7A971228234E8410001DD940 /* UBICcppWrapper */,
+				7A9711F9234D30EC001DD940 /* UBICcpp */,
+				7A9711F22349FBB1001DD940 /* PrivateKey */,
+				7A9711E123475254001DD940 /* Identicon */,
+				7A59496F2318896A00FBFFDC /* AsyncTasks */,
+				7A5949572317016400FBFFDC /* AppDelegate.swift */,
+				7A96719A23B3E5D4006DAA0E /* PassportInformationInputViewController.swift */,
+				7A5949592317016400FBFFDC /* SceneDelegate.swift */,
+				7A59495D2317016400FBFFDC /* SendViewController.swift */,
+				7A37A7E72353A5A0002838C3 /* Extensions.swift */,
+				7A9711EF23475961001DD940 /* TabBarController.swift */,
+				7A59495F2317016400FBFFDC /* Main.storyboard */,
+				7A5122F323B97EE8005AD1B0 /* NFCScanResultViewController.swift */,
+				7AEA098623B7D6FE0026536F /* QRScannerController.swift */,
+				7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */,
+				7AE0A993236DB1C000570396 /* TransactionViewController.swift */,
+				7AA36FEA236A2BF20068E6A6 /* ImportPrivateKeyViewController.swift */,
+				7A37A7EF235E7A1F002838C3 /* CurrencyFormatter.swift */,
+				7A37A7ED235A20D8002838C3 /* BalanceCollectionViewCell.swift */,
+				7AE0A995236DB2B200570396 /* TransactionCollectionViewCell.swift */,
+				7AA36FEE236C43460068E6A6 /* PrivateKeyCollectionViewCell.swift */,
+				7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */,
+				7A5949622317016500FBFFDC /* Assets.xcassets */,
+				7A5949642317016500FBFFDC /* LaunchScreen.storyboard */,
+				7A5949672317016500FBFFDC /* Info.plist */,
+				7A59496D231888DF00FBFFDC /* HomeViewController.swift */,
+				7A9711DF23474B9E001DD940 /* PrivateKeysViewController.swift */,
+				7AA36FEC236C42EF0068E6A6 /* MyUBIViewController.swift */,
+				7AE4845C2367A10100699CCA /* ReceiveViewController.swift */,
+			);
+			path = "UBIC Wallet";
+			sourceTree = "<group>";
+		};
+		7A59496F2318896A00FBFFDC /* AsyncTasks */ = {
+			isa = PBXGroup;
+			children = (
+				7A5949702318898500FBFFDC /* GetBalance.swift */,
+				7A37A7E92357B1F3002838C3 /* GetTransactionFees.swift */,
+				7A37A7EB2357DA15002838C3 /* SendTransaction.swift */,
+			);
+			path = AsyncTasks;
+			sourceTree = "<group>";
+		};
+		7A96719F23B3EBE7006DAA0E /* PassportReader */ = {
+			isa = PBXGroup;
+			children = (
+				7A9671B923B3EE07006DAA0E /* PassportDataFormatter */,
+				7A9671B223B3EDE1006DAA0E /* Parser */,
+				7A9671A723B3EDCE006DAA0E /* BacKeys.swift */,
+				7A9671A923B3EDCE006DAA0E /* OCPCWrapper.h */,
+				7A9671A423B3EDCE006DAA0E /* OCPCWrapper.mm */,
+				7A9671A023B3EDCD006DAA0E /* PassportCryptoWrapper.swift */,
+				7A9671A523B3EDCE006DAA0E /* Reader.swift */,
+				7A9671A323B3EDCE006DAA0E /* TestPass-Bridging-Header.h */,
+				7A9671A623B3EDCE006DAA0E /* Tools.swift */,
+			);
+			path = PassportReader;
+			sourceTree = "<group>";
+		};
+		7A9671B223B3EDE1006DAA0E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7A9671B523B3EDF5006DAA0E /* Iso19794Parser.swift */,
+				7A9671B323B3EDF5006DAA0E /* LDSParser.swift */,
+				7A9671B423B3EDF5006DAA0E /* MRZParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		7A9671B923B3EE07006DAA0E /* PassportDataFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				7A9671BA23B3EE1A006DAA0E /* PassportDataFormatter.swift */,
+			);
+			path = PassportDataFormatter;
+			sourceTree = "<group>";
+		};
+		7A9711E123475254001DD940 /* Identicon */ = {
+			isa = PBXGroup;
+			children = (
+				7A9711E723475280001DD940 /* CGColorExtension.swift */,
+				7A9711E523475280001DD940 /* CGImageExtension.swift */,
+				7A9711E323475280001DD940 /* GitHubIdenticon.swift */,
+				7A9711E223475280001DD940 /* IconGenerator.swift */,
+				7A9711E623475280001DD940 /* Identicon.h */,
+				7A9711E823475280001DD940 /* Identicon.swift */,
+				7A9711E423475280001DD940 /* JenkinsHash.swift */,
+			);
+			path = Identicon;
+			sourceTree = "<group>";
+		};
+		7A9711F22349FBB1001DD940 /* PrivateKey */ = {
+			isa = PBXGroup;
+			children = (
+				7A9711F32349FBCA001DD940 /* PrivateKeyGenerator.swift */,
+				7A9711F52349FBE4001DD940 /* KeyStore.swift */,
+			);
+			path = PrivateKey;
+			sourceTree = "<group>";
+		};
+		7A9711F9234D30EC001DD940 /* UBICcpp */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712C82350F3D7001DD940 /* support */,
+				7A9712C12350F3A1001DD940 /* Scripts */,
+				7A9712BB2350F36B001DD940 /* NtpRsk */,
+				7A9712B52350F338001DD940 /* NtpEsk */,
+				7A9712AE2350F305001DD940 /* Tools */,
+				7A9712AA2350F0B9001DD940 /* FS */,
+				7A9712902350F027001DD940 /* Transaction */,
+				7A9712772350EFD3001DD940 /* Crypto */,
+				7A97126C2350E258001DD940 /* PassportReader */,
+				7A9712652350E1BF001DD940 /* CertStore */,
+				7A971212234D3107001DD940 /* Address.cpp */,
+				7A9711FD234D3105001DD940 /* Address.h */,
+				7A9711FF234D3105001DD940 /* AddressHelper.h */,
+				7A971206234D3106001DD940 /* Base58.cpp */,
+				7A971204234D3106001DD940 /* Base58.h */,
+				7A9711FB234D3105001DD940 /* Base64.cpp */,
+				7A971202234D3105001DD940 /* Base64.h */,
+				7A971207234D3106001DD940 /* ChainParams.h */,
+				7A9711FE234D3105001DD940 /* Config.cpp */,
+				7A971216234D3108001DD940 /* Config.h */,
+				7A37A78423533C28002838C3 /* Nativelib.h */,
+				7A971210234D3107001DD940 /* Nativelib.cpp */,
+				7A971200234D3105001DD940 /* prevector.h */,
+				7A971205234D3106001DD940 /* serialize.h */,
+				7A971203234D3105001DD940 /* streams.h */,
+				7A97120A234D3106001DD940 /* UAmount.h */,
+				7A971215234D3107001DD940 /* Wallet.cpp */,
+				7A97120F234D3107001DD940 /* Wallet.h */,
+				7A9711FA234D3103001DD940 /* UBIC Wallet-Bridging-Header.h */,
+			);
+			path = UBICcpp;
+			sourceTree = "<group>";
+		};
+		7A971228234E8410001DD940 /* UBICcppWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				7A971229234E8433001DD940 /* OCWrapper.mm */,
+				7A97122B234E8450001DD940 /* OCWrapper.h */,
+				7A37A7E323537CE8002838C3 /* SwiftWrapper.swift */,
+			);
+			path = UBICcppWrapper;
+			sourceTree = "<group>";
+		};
+		7A97122E234E8902001DD940 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A97122F234E8903001DD940 /* libcrypto.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A9712652350E1BF001DD940 /* CertStore */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712692350E214001DD940 /* Cert.cpp */,
+				7A97126A2350E214001DD940 /* Cert.h */,
+			);
+			path = CertStore;
+			sourceTree = "<group>";
+		};
+		7A97126C2350E258001DD940 /* PassportReader */ = {
+			isa = PBXGroup;
+			children = (
+				7A97126E2350E27F001DD940 /* PKCS7 */,
+				7A97126D2350E268001DD940 /* LDS */,
+			);
+			path = PassportReader;
+			sourceTree = "<group>";
+		};
+		7A97126D2350E268001DD940 /* LDS */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712732350E2A5001DD940 /* LDSParser.cpp */,
+				7A9712722350E2A5001DD940 /* LDSParser.h */,
+			);
+			path = LDS;
+			sourceTree = "<group>";
+		};
+		7A97126E2350E27F001DD940 /* PKCS7 */ = {
+			isa = PBXGroup;
+			children = (
+				7A97126F2350E29F001DD940 /* PKCS7Parser.cpp */,
+				7A9712702350E29F001DD940 /* PKCS7Parser.h */,
+			);
+			path = PKCS7;
+			sourceTree = "<group>";
+		};
+		7A9712772350EFD3001DD940 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712822350EFF5001DD940 /* CreateSignature.cpp */,
+				7A9712792350EFF5001DD940 /* CreateSignature.h */,
+				7A97127E2350EFF5001DD940 /* ECCtools.cpp */,
+				7A97127D2350EFF5001DD940 /* ECCtools.h */,
+				7A9712832350EFF6001DD940 /* Hash160.cpp */,
+				7A9712852350EFF6001DD940 /* Hash160.h */,
+				7A97127A2350EFF5001DD940 /* Hash256.cpp */,
+				7A9712782350EFF5001DD940 /* Hash256.h */,
+				7A9712842350EFF6001DD940 /* PassportCrypto.cpp */,
+				7A97127F2350EFF5001DD940 /* PassportCrypto.h */,
+				7A9712812350EFF5001DD940 /* Ripemd160.cpp */,
+				7A9712802350EFF5001DD940 /* Ripemd160.h */,
+				7A9712862350EFF6001DD940 /* Sha256.cpp */,
+				7A9712872350EFF6001DD940 /* Sha256.h */,
+				7A97127C2350EFF5001DD940 /* VerifySignature.cpp */,
+				7A97127B2350EFF5001DD940 /* VerifySignature.h */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		7A9712902350F027001DD940 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712972350F045001DD940 /* Transaction.cpp */,
+				7A9712922350F045001DD940 /* Transaction.h */,
+				7A9712952350F045001DD940 /* TransactionHelper.cpp */,
+				7A9712962350F045001DD940 /* TransactionHelper.h */,
+				7A9712982350F045001DD940 /* TxIn.cpp */,
+				7A9712912350F045001DD940 /* TxIn.h */,
+				7A9712942350F045001DD940 /* TxOut.cpp */,
+				7A9712932350F045001DD940 /* TxOut.h */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		7A9712AA2350F0B9001DD940 /* FS */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712AC2350F2E3001DD940 /* FS.cpp */,
+				7A9712AB2350F2E3001DD940 /* FS.h */,
+			);
+			path = FS;
+			sourceTree = "<group>";
+		};
+		7A9712AE2350F305001DD940 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712B02350F31B001DD940 /* Hexdump.cpp */,
+				7A9712B22350F31B001DD940 /* Hexdump.h */,
+				7A9712B12350F31B001DD940 /* Log.cpp */,
+				7A9712AF2350F31B001DD940 /* Log.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7A9712B52350F338001DD940 /* NtpEsk */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712B92350F34F001DD940 /* NtpEsk.cpp */,
+				7A9712B62350F34F001DD940 /* NtpEsk.h */,
+				7A9712B82350F34F001DD940 /* NtpEskSignatureRequestObject.h */,
+				7A9712B72350F34F001DD940 /* NtpEskSignatureVerificationObject.h */,
+			);
+			path = NtpEsk;
+			sourceTree = "<group>";
+		};
+		7A9712BB2350F36B001DD940 /* NtpRsk */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712BF2350F381001DD940 /* NtpRsk.cpp */,
+				7A9712BD2350F381001DD940 /* NtpRsk.h */,
+				7A9712BC2350F381001DD940 /* NtpRskSignatureRequestObject.h */,
+				7A9712BE2350F381001DD940 /* NtpRskSignatureVerificationObject.h */,
+			);
+			path = NtpRsk;
+			sourceTree = "<group>";
+		};
+		7A9712C12350F3A1001DD940 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712C52350F3B4001DD940 /* AddCertificateScript.h */,
+				7A9712C42350F3B4001DD940 /* DeactivateCertificateScript.h */,
+				7A9712C72350F3B4001DD940 /* KycRequestScript.h */,
+				7A9712C62350F3B4001DD940 /* NtpskAlreadyUsedScript.h */,
+				7A9712C32350F3B4001DD940 /* PkhInScript.h */,
+				7A9712C22350F3B4001DD940 /* UScript.h */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		7A9712C82350F3D7001DD940 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712CB2350F419001DD940 /* cleanse.cpp */,
+				7A9712CA2350F419001DD940 /* cleanse.h */,
+				7A9712C92350F3E6001DD940 /* allocators */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		7A9712C92350F3E6001DD940 /* allocators */ = {
+			isa = PBXGroup;
+			children = (
+				7A9712CD2350F420001DD940 /* zeroafterfree.h */,
+			);
+			path = allocators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A5949532317016400FBFFDC /* UBIC Wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A59496A2317016500FBFFDC /* Build configuration list for PBXNativeTarget "UBIC Wallet" */;
+			buildPhases = (
+				7A5949502317016400FBFFDC /* Sources */,
+				7A5949512317016400FBFFDC /* Frameworks */,
+				7A5949522317016400FBFFDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UBIC Wallet";
+			productName = "UBIC Wallet";
+			productReference = 7A5949542317016400FBFFDC /* UBIC Wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A59494C2317016400FBFFDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = Bondi;
+				TargetAttributes = {
+					7A5949532317016400FBFFDC = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+				};
+			};
+			buildConfigurationList = 7A59494F2317016400FBFFDC /* Build configuration list for PBXProject "UBIC Wallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A59494B2317016400FBFFDC;
+			productRefGroup = 7A5949552317016400FBFFDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A5949532317016400FBFFDC /* UBIC Wallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A5949522317016400FBFFDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5949662317016500FBFFDC /* LaunchScreen.storyboard in Resources */,
+				7A5949632317016500FBFFDC /* Assets.xcassets in Resources */,
+				7A5949612317016400FBFFDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A5949502317016400FBFFDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A37A78623533E31002838C3 /* OCWrapper.h in Sources */,
+				7A37A78723533E31002838C3 /* cleanse.cpp in Sources */,
+				7A96719B23B3E5D4006DAA0E /* PassportInformationInputViewController.swift in Sources */,
+				7A37A78823533E31002838C3 /* cleanse.h in Sources */,
+				7A37A78923533E31002838C3 /* zeroafterfree.h in Sources */,
+				7A9671B623B3EDF6006DAA0E /* LDSParser.swift in Sources */,
+				7A37A78A23533E31002838C3 /* AddCertificateScript.h in Sources */,
+				7A37A78B23533E31002838C3 /* DeactivateCertificateScript.h in Sources */,
+				7A37A78C23533E31002838C3 /* KycRequestScript.h in Sources */,
+				7A37A78D23533E31002838C3 /* NtpskAlreadyUsedScript.h in Sources */,
+				7A37A78E23533E31002838C3 /* PkhInScript.h in Sources */,
+				7A37A78F23533E31002838C3 /* UScript.h in Sources */,
+				7A37A7EA2357B1F3002838C3 /* GetTransactionFees.swift in Sources */,
+				7A37A79023533E31002838C3 /* NtpRsk.cpp in Sources */,
+				7A37A79123533E31002838C3 /* NtpRsk.h in Sources */,
+				7A37A79223533E31002838C3 /* NtpRskSignatureRequestObject.h in Sources */,
+				7A5122F223B963C7005AD1B0 /* ChallengeParser.swift in Sources */,
+				7A37A79323533E31002838C3 /* NtpRskSignatureVerificationObject.h in Sources */,
+				7A37A79423533E31002838C3 /* NtpEsk.cpp in Sources */,
+				7A37A79523533E31002838C3 /* NtpEsk.h in Sources */,
+				7A37A79623533E31002838C3 /* NtpEskSignatureRequestObject.h in Sources */,
+				7A37A79723533E31002838C3 /* NtpEskSignatureVerificationObject.h in Sources */,
+				7AFDA36323AF0C6800774CFA /* SelectCurrencyTextField.swift in Sources */,
+				7A37A79823533E31002838C3 /* Hexdump.cpp in Sources */,
+				7A37A79923533E31002838C3 /* Hexdump.h in Sources */,
+				7A37A79A23533E31002838C3 /* Log.cpp in Sources */,
+				7A37A79B23533E31002838C3 /* Log.h in Sources */,
+				7A37A79C23533E31002838C3 /* FS.cpp in Sources */,
+				7A9671B723B3EDF6006DAA0E /* MRZParser.swift in Sources */,
+				7A37A7E82353A5A0002838C3 /* Extensions.swift in Sources */,
+				7AE0A996236DB2B200570396 /* TransactionCollectionViewCell.swift in Sources */,
+				7A37A79D23533E31002838C3 /* FS.h in Sources */,
+				7A9671AF23B3EDCE006DAA0E /* Tools.swift in Sources */,
+				7A37A79E23533E31002838C3 /* Transaction.cpp in Sources */,
+				7A37A79F23533E31002838C3 /* Transaction.h in Sources */,
+				7A37A7A023533E31002838C3 /* TransactionHelper.cpp in Sources */,
+				7A37A7A123533E31002838C3 /* TransactionHelper.h in Sources */,
+				7A37A7A223533E31002838C3 /* TxIn.cpp in Sources */,
+				7AEA098723B7D6FE0026536F /* QRScannerController.swift in Sources */,
+				7A5122F423B97EE8005AD1B0 /* NFCScanResultViewController.swift in Sources */,
+				7A37A7A323533E31002838C3 /* TxIn.h in Sources */,
+				7A37A7A423533E31002838C3 /* TxOut.cpp in Sources */,
+				7A37A7A523533E31002838C3 /* TxOut.h in Sources */,
+				7A37A7A623533E31002838C3 /* CreateSignature.cpp in Sources */,
+				7A37A7A723533E31002838C3 /* CreateSignature.h in Sources */,
+				7AFDA36523AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift in Sources */,
+				7A37A7A823533E31002838C3 /* ECCtools.cpp in Sources */,
+				7A37A7A923533E31002838C3 /* ECCtools.h in Sources */,
+				7A37A7AA23533E31002838C3 /* Hash160.cpp in Sources */,
+				7A37A7AB23533E31002838C3 /* Hash160.h in Sources */,
+				7A9671AD23B3EDCE006DAA0E /* OCPCWrapper.mm in Sources */,
+				7A37A7AC23533E31002838C3 /* Hash256.cpp in Sources */,
+				7A37A7AD23533E31002838C3 /* Hash256.h in Sources */,
+				7A37A7AE23533E31002838C3 /* PassportCrypto.cpp in Sources */,
+				7A37A7AF23533E31002838C3 /* PassportCrypto.h in Sources */,
+				7A37A7B023533E31002838C3 /* Ripemd160.cpp in Sources */,
+				7A37A7B123533E31002838C3 /* Ripemd160.h in Sources */,
+				7A37A7B223533E31002838C3 /* Sha256.cpp in Sources */,
+				7A37A7B323533E31002838C3 /* Sha256.h in Sources */,
+				7A37A7B423533E31002838C3 /* VerifySignature.cpp in Sources */,
+				7A37A7F0235E7A1F002838C3 /* CurrencyFormatter.swift in Sources */,
+				7A37A7B523533E31002838C3 /* VerifySignature.h in Sources */,
+				7A37A7B623533E31002838C3 /* PKCS7Parser.cpp in Sources */,
+				7A37A7B723533E31002838C3 /* PKCS7Parser.h in Sources */,
+				7A37A7B823533E31002838C3 /* LDSParser.cpp in Sources */,
+				7A37A7B923533E31002838C3 /* LDSParser.h in Sources */,
+				7A37A7BA23533E31002838C3 /* Cert.cpp in Sources */,
+				7AA36FEB236A2BF20068E6A6 /* ImportPrivateKeyViewController.swift in Sources */,
+				7A37A7BB23533E31002838C3 /* Cert.h in Sources */,
+				7A37A7BC23533E31002838C3 /* Address.cpp in Sources */,
+				7A37A7BD23533E31002838C3 /* Address.h in Sources */,
+				7A9671B023B3EDCE006DAA0E /* BacKeys.swift in Sources */,
+				7A37A7BE23533E31002838C3 /* AddressHelper.h in Sources */,
+				7A37A7BF23533E31002838C3 /* Base58.cpp in Sources */,
+				7A37A7C023533E31002838C3 /* Base58.h in Sources */,
+				7A9671AE23B3EDCE006DAA0E /* Reader.swift in Sources */,
+				7A37A7C123533E31002838C3 /* Base64.cpp in Sources */,
+				7A9671B823B3EDF6006DAA0E /* Iso19794Parser.swift in Sources */,
+				7A37A7C223533E31002838C3 /* Base64.h in Sources */,
+				7A37A7C323533E31002838C3 /* ChainParams.h in Sources */,
+				7A37A7C423533E31002838C3 /* Config.cpp in Sources */,
+				7A37A7C523533E31002838C3 /* Config.h in Sources */,
+				7A37A7C623533E31002838C3 /* Nativelib.h in Sources */,
+				7AE0A994236DB1C000570396 /* TransactionViewController.swift in Sources */,
+				7A37A7C723533E31002838C3 /* Nativelib.cpp in Sources */,
+				7A37A7C823533E31002838C3 /* prevector.h in Sources */,
+				7A9671BB23B3EE1A006DAA0E /* PassportDataFormatter.swift in Sources */,
+				7A37A7C923533E31002838C3 /* serialize.h in Sources */,
+				7A37A7CA23533E31002838C3 /* streams.h in Sources */,
+				7A37A7CB23533E31002838C3 /* UAmount.h in Sources */,
+				7A37A7CC23533E31002838C3 /* Wallet.cpp in Sources */,
+				7A37A7CD23533E31002838C3 /* Wallet.h in Sources */,
+				7AA36FEF236C43460068E6A6 /* PrivateKeyCollectionViewCell.swift in Sources */,
+				7A37A7E52353806D002838C3 /* SwiftWrapper.swift in Sources */,
+				7A37A7CE23533E31002838C3 /* UBIC Wallet-Bridging-Header.h in Sources */,
+				7A37A7CF23533E31002838C3 /* PrivateKeyGenerator.swift in Sources */,
+				7A37A7D023533E31002838C3 /* KeyStore.swift in Sources */,
+				7A37A7D123533E31002838C3 /* CGColorExtension.swift in Sources */,
+				7A37A7EE235A20D8002838C3 /* BalanceCollectionViewCell.swift in Sources */,
+				7A37A7D223533E31002838C3 /* CGImageExtension.swift in Sources */,
+				7AA36FED236C42EF0068E6A6 /* MyUBIViewController.swift in Sources */,
+				7A37A7D323533E31002838C3 /* GitHubIdenticon.swift in Sources */,
+				7A37A7D423533E31002838C3 /* IconGenerator.swift in Sources */,
+				7A37A7D523533E31002838C3 /* Identicon.h in Sources */,
+				7AE4845D2367A10100699CCA /* ReceiveViewController.swift in Sources */,
+				7A37A7D623533E31002838C3 /* Identicon.swift in Sources */,
+				7A37A7EC2357DA15002838C3 /* SendTransaction.swift in Sources */,
+				7A9671AB23B3EDCE006DAA0E /* PassportCryptoWrapper.swift in Sources */,
+				7A37A7D723533E31002838C3 /* JenkinsHash.swift in Sources */,
+				7A37A7D823533E31002838C3 /* GetBalance.swift in Sources */,
+				7A37A7D923533E31002838C3 /* AppDelegate.swift in Sources */,
+				7A37A7DA23533E31002838C3 /* SceneDelegate.swift in Sources */,
+				7A37A7DB23533E31002838C3 /* SendViewController.swift in Sources */,
+				7A37A7E62353807D002838C3 /* OCWrapper.mm in Sources */,
+				7A37A7DC23533E31002838C3 /* TabBarController.swift in Sources */,
+				7A37A7E123533E31002838C3 /* HomeViewController.swift in Sources */,
+				7A37A7E223533E31002838C3 /* PrivateKeysViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A59495F2317016400FBFFDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A5949602317016400FBFFDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A5949642317016500FBFFDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A5949652317016500FBFFDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A5949682317016500FBFFDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/OpenSSL/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/OpenSSL/lib";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		7A5949692317016500FBFFDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/OpenSSL/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/OpenSSL/lib";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A59496B2317016500FBFFDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "UBIC Wallet/UBIC Wallet.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = U7TB656498;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "UBIC Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSSL/lib",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "ubic.UBIC-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UBIC Wallet/UBICcpp/UBIC Wallet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7A59496C2317016500FBFFDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "UBIC Wallet/UBIC Wallet.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = U7TB656498;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "UBIC Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSSL/lib",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "ubic.UBIC-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UBIC Wallet/UBICcpp/UBIC Wallet-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A59494F2317016400FBFFDC /* Build configuration list for PBXProject "UBIC Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5949682317016500FBFFDC /* Debug */,
+				7A5949692317016500FBFFDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A59496A2317016500FBFFDC /* Build configuration list for PBXNativeTarget "UBIC Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A59496B2317016500FBFFDC /* Debug */,
+				7A59496C2317016500FBFFDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A59494C2317016400FBFFDC /* Project object */;
+}
