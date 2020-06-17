@@ -14,9 +14,9 @@ class ServerSelector {
         NSLog("secondsFromGMT: " + String(secondsFromGMT))
         if secondsFromGMT >= 5 * 3600 && secondsFromGMT <= 12 * 3600 {
             NSLog("Selected the ubic.asia server")
-            return "https://ubic.asia";
+            return "https://ubic.asia"
         }
         NSLog("Selected the ubic.network server")
-        return "https://ubic.network";
+        return "https://ubic.network"
     }
 }

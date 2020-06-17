@@ -140,9 +140,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 self.BalanceCollectionView.reloadData()
                 return
             }
+            
+
+            self.emptyWalletTextView.text = "Your wallet is empty. However you can easily collect UBIC coins by scanning the NFC chip of your passport to join it's UBI program"
+            self.registerPassportButton.isHidden = false
+            
             if let balance = self.balance {
                 if balance.amount.amount.count > 3 {
                     self.balancePageController.isHidden = false
+                    self.registerPassportButton.isHidden = true
+                    self.emptyWalletMessageView.isHidden = true
                 } else {
                     self.balancePageController.isHidden = true
                 }
@@ -151,6 +158,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.emptyWalletMessageView.isHidden = false
                 } else {
                     self.emptyWalletMessageView.isHidden = true
+                    self.registerPassportButton.isHidden = true
                 }
             } else {
                 self.emptyWalletMessageView.isHidden = false
@@ -159,12 +167,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             //special case register passport transaction is pending
             if let pendingTransactions = balance.pendingTransactions {
                 for pendingTransaction in pendingTransactions {
+                    NSLog("pendingTransaction.type:")
+                    NSLog(pendingTransaction.type)
                     if pendingTransaction.type == "registerPassport" {
                         self.emptyWalletTextView.text = "Registration is in progress, you will start to receive coins soon, be patient"
                         self.registerPassportButton.isHidden = true
-                    } else {
-                        self.emptyWalletTextView.text = "Your wallet is empty. However you can easily collect UBIC coins by scanning the NFC chip of your passport to join it's UBI program"
-                        self.registerPassportButton.isHidden = false
                     }
                 }
             }
@@ -172,9 +179,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if balance.dsc?.isEmpty == false { // special case: wallet empty but passport is registered
                 self.emptyWalletTextView.text = "Registration is in progress, you will start to receive coins soon, be patient"
                 self.registerPassportButton.isHidden = true
-            } else {
-                self.emptyWalletTextView.text = "Your wallet is empty. However you can easily collect UBIC coins by scanning the NFC chip of your passport to join it's UBI program"
-                self.registerPassportButton.isHidden = false
             }
             
             self.activityIndicator.isHidden = true
