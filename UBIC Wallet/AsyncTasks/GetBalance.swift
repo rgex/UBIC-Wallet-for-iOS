@@ -82,8 +82,6 @@ struct Balance: Codable {
 
 class GetBalance {
     
-    let baseUrl = "https://ubic.network"
-    //let baseUrl = "http://192.168.178.35:8888/ubic.network"
     var completionHandler: (Bool, Balance) -> Void
 
     init(completionHandler: @escaping (Bool, Balance) -> Void) {
@@ -93,7 +91,7 @@ class GetBalance {
     func getBalance(address: String) {
         print("getBalance: \(address)")
         //let url = URL(string: baseUrl + "/api/addresses/qVzfuP4vT7cPbYW9rR4EWGMY6GYBVKKKJ")!
-        let url = URL(string: baseUrl + "/api/addresses/" + address)!
+        let url = URL(string:  ServerSelector.getBaseUrl() + "/api/addresses/" + address)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         

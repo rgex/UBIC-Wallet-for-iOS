@@ -125,6 +125,7 @@
 		7AEA098723B7D6FE0026536F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA098623B7D6FE0026536F /* QRScannerController.swift */; };
 		7AFDA36323AF0C6800774CFA /* SelectCurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */; };
 		7AFDA36523AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */; };
+		7C48CEA9249A8EFD00D86B04 /* ServerSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C48CEA8249A8EFD00D86B04 /* ServerSelector.swift */; };
 		7C55E595249A8BB400E02F75 /* VectorTool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C55E593249A8BB400E02F75 /* VectorTool.cpp */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +254,7 @@
 		7AEA098623B7D6FE0026536F /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyTextField.swift; sourceTree = "<group>"; };
 		7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPassportCollectionViewCell.swift; sourceTree = "<group>"; };
+		7C48CEA8249A8EFD00D86B04 /* ServerSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSelector.swift; sourceTree = "<group>"; };
 		7C55E590249A8AC000E02F75 /* serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialize.h; sourceTree = "<group>"; };
 		7C55E591249A8AC000E02F75 /* streams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streams.h; sourceTree = "<group>"; };
 		7C55E592249A8AC000E02F75 /* prevector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prevector.h; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				7A5949702318898500FBFFDC /* GetBalance.swift */,
 				7A37A7E92357B1F3002838C3 /* GetTransactionFees.swift */,
 				7A37A7EB2357DA15002838C3 /* SendTransaction.swift */,
+				7C48CEA8249A8EFD00D86B04 /* ServerSelector.swift */,
 			);
 			path = AsyncTasks;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				7A37A79923533E31002838C3 /* Hexdump.h in Sources */,
 				7A37A79A23533E31002838C3 /* Log.cpp in Sources */,
 				7A37A79B23533E31002838C3 /* Log.h in Sources */,
+				7C48CEA9249A8EFD00D86B04 /* ServerSelector.swift in Sources */,
 				7A37A79C23533E31002838C3 /* FS.cpp in Sources */,
 				7A9671B723B3EDF6006DAA0E /* MRZParser.swift in Sources */,
 				7A37A7E82353A5A0002838C3 /* Extensions.swift in Sources */,

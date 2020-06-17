@@ -13,8 +13,7 @@ struct TransactionResponse: Codable {
 }
 
 class SendTransaction {
-    //let baseUrl = "http://192.168.178.35:8888/ubic.network"
-    let baseUrl = "https://ubic.network"
+    
     var completionHandler: (Bool) -> Void
     var customUrl:String = ""
 
@@ -31,7 +30,7 @@ class SendTransaction {
         if self.customUrl.count > 0 {
             url = URL(string: self.customUrl)
         } else {
-            url = URL(string: baseUrl + "/api/send")
+            url = URL(string: ServerSelector.getBaseUrl() + "/api/send")
         }
         if let requestUrl = url {
             var request = URLRequest(url: requestUrl)
