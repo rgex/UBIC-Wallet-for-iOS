@@ -74,9 +74,6 @@
 		7A37A7C523533E31002838C3 /* Config.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971216234D3108001DD940 /* Config.h */; };
 		7A37A7C623533E31002838C3 /* Nativelib.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A37A78423533C28002838C3 /* Nativelib.h */; };
 		7A37A7C723533E31002838C3 /* Nativelib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A971210234D3107001DD940 /* Nativelib.cpp */; };
-		7A37A7C823533E31002838C3 /* prevector.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971200234D3105001DD940 /* prevector.h */; };
-		7A37A7C923533E31002838C3 /* serialize.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971205234D3106001DD940 /* serialize.h */; };
-		7A37A7CA23533E31002838C3 /* streams.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A971203234D3105001DD940 /* streams.h */; };
 		7A37A7CB23533E31002838C3 /* UAmount.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97120A234D3106001DD940 /* UAmount.h */; };
 		7A37A7CC23533E31002838C3 /* Wallet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A971215234D3107001DD940 /* Wallet.cpp */; };
 		7A37A7CD23533E31002838C3 /* Wallet.h in Sources */ = {isa = PBXBuildFile; fileRef = 7A97120F234D3107001DD940 /* Wallet.h */; };
@@ -128,6 +125,7 @@
 		7AEA098723B7D6FE0026536F /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA098623B7D6FE0026536F /* QRScannerController.swift */; };
 		7AFDA36323AF0C6800774CFA /* SelectCurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */; };
 		7AFDA36523AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */; };
+		7C55E595249A8BB400E02F75 /* VectorTool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C55E593249A8BB400E02F75 /* VectorTool.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,11 +177,8 @@
 		7A9711FD234D3105001DD940 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		7A9711FE234D3105001DD940 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
 		7A9711FF234D3105001DD940 /* AddressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressHelper.h; sourceTree = "<group>"; };
-		7A971200234D3105001DD940 /* prevector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prevector.h; sourceTree = "<group>"; };
 		7A971202234D3105001DD940 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		7A971203234D3105001DD940 /* streams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streams.h; sourceTree = "<group>"; };
 		7A971204234D3106001DD940 /* Base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base58.h; sourceTree = "<group>"; };
-		7A971205234D3106001DD940 /* serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialize.h; sourceTree = "<group>"; };
 		7A971206234D3106001DD940 /* Base58.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base58.cpp; sourceTree = "<group>"; };
 		7A971207234D3106001DD940 /* ChainParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainParams.h; sourceTree = "<group>"; };
 		7A97120A234D3106001DD940 /* UAmount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAmount.h; sourceTree = "<group>"; };
@@ -258,6 +253,11 @@
 		7AEA098623B7D6FE0026536F /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		7AFDA36223AF0C6800774CFA /* SelectCurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyTextField.swift; sourceTree = "<group>"; };
 		7AFDA36423AFFBB300774CFA /* RegisteredPassportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPassportCollectionViewCell.swift; sourceTree = "<group>"; };
+		7C55E590249A8AC000E02F75 /* serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialize.h; sourceTree = "<group>"; };
+		7C55E591249A8AC000E02F75 /* streams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streams.h; sourceTree = "<group>"; };
+		7C55E592249A8AC000E02F75 /* prevector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prevector.h; sourceTree = "<group>"; };
+		7C55E593249A8BB400E02F75 /* VectorTool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorTool.cpp; sourceTree = "<group>"; };
+		7C55E594249A8BB400E02F75 /* VectorTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorTool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,11 +301,11 @@
 		7A5949562317016400FBFFDC /* UBIC Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				7A9711F9234D30EC001DD940 /* UBICcpp */,
 				7A5122F523B9AE42005AD1B0 /* UBIC Wallet.entitlements */,
 				7A5122F023B963A7005AD1B0 /* Utils */,
 				7A96719F23B3EBE7006DAA0E /* PassportReader */,
 				7A971228234E8410001DD940 /* UBICcppWrapper */,
-				7A9711F9234D30EC001DD940 /* UBICcpp */,
 				7A9711F22349FBB1001DD940 /* PrivateKey */,
 				7A9711E123475254001DD940 /* Identicon */,
 				7A59496F2318896A00FBFFDC /* AsyncTasks */,
@@ -407,6 +407,7 @@
 		7A9711F9234D30EC001DD940 /* UBICcpp */ = {
 			isa = PBXGroup;
 			children = (
+				7C55E58C249A8A8700E02F75 /* Serialization */,
 				7A9712C82350F3D7001DD940 /* support */,
 				7A9712C12350F3A1001DD940 /* Scripts */,
 				7A9712BB2350F36B001DD940 /* NtpRsk */,
@@ -429,9 +430,6 @@
 				7A971216234D3108001DD940 /* Config.h */,
 				7A37A78423533C28002838C3 /* Nativelib.h */,
 				7A971210234D3107001DD940 /* Nativelib.cpp */,
-				7A971200234D3105001DD940 /* prevector.h */,
-				7A971205234D3106001DD940 /* serialize.h */,
-				7A971203234D3105001DD940 /* streams.h */,
 				7A97120A234D3106001DD940 /* UAmount.h */,
 				7A971215234D3107001DD940 /* Wallet.cpp */,
 				7A97120F234D3107001DD940 /* Wallet.h */,
@@ -548,6 +546,8 @@
 				7A9712B22350F31B001DD940 /* Hexdump.h */,
 				7A9712B12350F31B001DD940 /* Log.cpp */,
 				7A9712AF2350F31B001DD940 /* Log.h */,
+				7C55E593249A8BB400E02F75 /* VectorTool.cpp */,
+				7C55E594249A8BB400E02F75 /* VectorTool.h */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -603,6 +603,16 @@
 				7A9712CD2350F420001DD940 /* zeroafterfree.h */,
 			);
 			path = allocators;
+			sourceTree = "<group>";
+		};
+		7C55E58C249A8A8700E02F75 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				7C55E592249A8AC000E02F75 /* prevector.h */,
+				7C55E590249A8AC000E02F75 /* serialize.h */,
+				7C55E591249A8AC000E02F75 /* streams.h */,
+			);
+			path = Serialization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -762,10 +772,7 @@
 				7A37A7C623533E31002838C3 /* Nativelib.h in Sources */,
 				7AE0A994236DB1C000570396 /* TransactionViewController.swift in Sources */,
 				7A37A7C723533E31002838C3 /* Nativelib.cpp in Sources */,
-				7A37A7C823533E31002838C3 /* prevector.h in Sources */,
 				7A9671BB23B3EE1A006DAA0E /* PassportDataFormatter.swift in Sources */,
-				7A37A7C923533E31002838C3 /* serialize.h in Sources */,
-				7A37A7CA23533E31002838C3 /* streams.h in Sources */,
 				7A37A7CB23533E31002838C3 /* UAmount.h in Sources */,
 				7A37A7CC23533E31002838C3 /* Wallet.cpp in Sources */,
 				7A37A7CD23533E31002838C3 /* Wallet.h in Sources */,
@@ -774,6 +781,7 @@
 				7A37A7CE23533E31002838C3 /* UBIC Wallet-Bridging-Header.h in Sources */,
 				7A37A7CF23533E31002838C3 /* PrivateKeyGenerator.swift in Sources */,
 				7A37A7D023533E31002838C3 /* KeyStore.swift in Sources */,
+				7C55E595249A8BB400E02F75 /* VectorTool.cpp in Sources */,
 				7A37A7D123533E31002838C3 /* CGColorExtension.swift in Sources */,
 				7A37A7EE235A20D8002838C3 /* BalanceCollectionViewCell.swift in Sources */,
 				7A37A7D223533E31002838C3 /* CGImageExtension.swift in Sources */,

@@ -75,7 +75,7 @@ std::string Nativelib::getPassportTransaction(
         NtpRskSignatureRequestObject *ntpRskSignatureRequestObject = pkcs7Parser->getNtpRsk();
 
         // @TODO perhaps add padding to txId
-        ntpRskSignatureRequestObject->setNm(ECCtools::vectorToBn(txId));
+        ntpRskSignatureRequestObject->setNm(txId);
 
         NtpRskSignatureVerificationObject *ntpRskSignatureVerificationObject = NtpRsk::signWithNtpRsk(
                 ntpRskSignatureRequestObject
@@ -274,7 +274,7 @@ std::string Nativelib::getKycTransaction(
         NtpRskSignatureRequestObject *ntpRskSignatureRequestObject = pkcs7Parser->getNtpRsk();
 
         // @TODO perhaps add padding to txId
-        ntpRskSignatureRequestObject->setNm(ECCtools::vectorToBn(txId));
+        ntpRskSignatureRequestObject->setNm(txId);
 
         NtpRskSignatureVerificationObject *ntpRskSignatureVerificationObject = NtpRsk::signWithNtpRsk(
                 ntpRskSignatureRequestObject
