@@ -95,6 +95,12 @@ class CurrencyFormatter {
             return "UPL"
         case 36:
             return "UNL"
+        case 37:
+            return "UPH"
+        case 38:
+            return "UIT"
+        case 39:
+            return "UBR"
         default:
             return ""
         }
@@ -173,7 +179,13 @@ class CurrencyFormatter {
             case "UPL":
                 return 35
             case "UNL":
-                return 35
+                return 36
+            case "UPH":
+                return 37
+            case "UIT":
+                return 38
+            case "UBR":
+                return 39
             default:
                 return 0
         }
