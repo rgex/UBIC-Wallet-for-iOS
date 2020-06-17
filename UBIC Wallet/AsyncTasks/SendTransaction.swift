@@ -10,14 +10,15 @@ import Foundation
 
 struct TransactionResponse: Codable {
     var success: Bool
+    var error: String?
 }
 
 class SendTransaction {
     
-    var completionHandler: (Bool) -> Void
+    var completionHandler: (Bool, String) -> Void
     var customUrl:String = ""
 
-    init(completionHandler: @escaping (Bool) -> Void) {
+    init(completionHandler: @escaping (Bool, String) -> Void) {
         self.completionHandler = completionHandler
     }
     
@@ -62,11 +63,14 @@ class SendTransaction {
                 print("transactionResponse :")
                 print(transactionResponse)
                 
-                self.completionHandler(transactionResponse.success)
-                
+                if let message: String = transactionResponse.error {
+                    self.completionHandler(transactionResponse.success, message)
+                } else {
+                    self.completionHandler(transactionResponse.success, "")
+                }
             } catch let parsingError {
                  print("Error", parsingError)
-                 self.completionHandler(false)
+                 self.completionHandler(false, "")
             }
         }
     

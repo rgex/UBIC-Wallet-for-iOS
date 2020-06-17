@@ -297,7 +297,7 @@ class PassportInformationInputViewController: UIViewController, NFCTagReaderSess
         }
     }
     
-    func completeSendTransaction(success: Bool) {
+    func completeSendTransaction(success: Bool, message: String) {
         self.completeTransactionSuccess = success
         DispatchQueue.main.async {
             if success {
@@ -305,16 +305,22 @@ class PassportInformationInputViewController: UIViewController, NFCTagReaderSess
                 self.message = "Your passport was registered, you'll start to receive your cryptoUBI in some minutes"
                 self.performSegue(withIdentifier: "scanResultSegue", sender: self)
             } else {
-                if self.readingType == .registerPassport {
+                if !message.isEmpty {
                     self.success = false
-                    self.message = "Could not validate the transaction. Perhaps the passport is already registered on UBIC"
+                    self.message = message
                     self.performSegue(withIdentifier: "scanResultSegue", sender: self)
-                }
-                
-                if self.readingType == .imageKYC || self.readingType == .mrzKYC || self.readingType == .anonymousKYC {
-                    self.success = false
-                    self.message = "The KYC authentication failed."
-                    self.performSegue(withIdentifier: "scanResultSegue", sender: self)
+                } else {
+                    if self.readingType == .registerPassport {
+                        self.success = false
+                        self.message = "Could not validate the transaction. Perhaps the passport is already registered on UBIC"
+                        self.performSegue(withIdentifier: "scanResultSegue", sender: self)
+                    }
+                    
+                    if self.readingType == .imageKYC || self.readingType == .mrzKYC || self.readingType == .anonymousKYC {
+                        self.success = false
+                        self.message = "The KYC authentication failed."
+                        self.performSegue(withIdentifier: "scanResultSegue", sender: self)
+                    }
                 }
             }
         }

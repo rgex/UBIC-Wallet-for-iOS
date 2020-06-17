@@ -28,8 +28,6 @@ void Wallet::setSeed(std::vector<unsigned char> newSeed) {
 
 bool Wallet::generateWallet() {
 
-    Log(LOG_LEVEL_INFO) << "Seed: " << this->seed;
-
     std::vector<unsigned char> currentPrivKey = this->seed;
 
     Config& config = Config::Instance();
@@ -38,7 +36,6 @@ bool Wallet::generateWallet() {
     for(int i = 0; i < config.getNumberOfAdresses(); i++) {
 
         currentPrivKey = Hash256::hash256(FS::concatPaths(currentPrivKey, this->seed));
-        Log(LOG_LEVEL_INFO) << "currentPrivKey: " << currentPrivKey;
 
         EVP_PKEY* privateKey = EVP_PKEY_new();
 

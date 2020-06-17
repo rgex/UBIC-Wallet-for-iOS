@@ -126,7 +126,7 @@ class SendViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             let readableAddress = self.recipientAddressTextField.text
             let currency = CurrencyFormatter.getcurrencyIdFromCode(currencyPickerCurrentCurrency)
             let amountString = self.amountTextField.text ?? "0"
-            var amount:UInt64 = UInt64(amountString) ?? 0
+            var amount:Double = Double(amountString) ?? 0
             var fee:UInt64 = 0
             
             if let readableAddress = self.recipientAddressTextField.text {
@@ -161,11 +161,11 @@ class SendViewController: UIViewController, UIPickerViewDataSource, UIPickerView
                 return
             }
             
-            amount = amount * 1000000
+            let amount64:UInt64 = UInt64(amount * 1000000)
             
             let keyStore = KeyStore()
         
-            let transaction = OCWrapper.getTransaction(keyStore.getCurrentKey().hexToData(), readableAddress: readableAddress, currency: Int32(currency), amount: amount, fee: UInt64(fee), nonce: Int32(self.nonce))
+            let transaction = OCWrapper.getTransaction(keyStore.getCurrentKey().hexToData(), readableAddress: readableAddress, currency: Int32(currency), amount: amount64, fee: UInt64(fee), nonce: Int32(self.nonce))
             
             if transaction != nil {
                 // transaction is base64 encoded so it's length is greater than the length of the actual transaction
@@ -177,7 +177,7 @@ class SendViewController: UIViewController, UIPickerViewDataSource, UIPickerView
                 }
                 
 
-                let transaction2 = OCWrapper.getTransaction(keyStore.getCurrentKey().hexToData(), readableAddress: readableAddress, currency: Int32(currency), amount: amount, fee: fee, nonce: Int32(self.nonce)) ?? ""
+                let transaction2 = OCWrapper.getTransaction(keyStore.getCurrentKey().hexToData(), readableAddress: readableAddress, currency: Int32(currency), amount: amount64, fee: fee, nonce: Int32(self.nonce)) ?? ""
                 
                 print("transaction2: " + transaction2)
                 
@@ -236,18 +236,24 @@ class SendViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         print("GetBalance fired")
     }
     
-    func completeSendTransaction(success: Bool) {
+    func completeSendTransaction(success: Bool, message: String) {
         DispatchQueue.main.async {
             if success {
-                let alert = UIAlertController(title: NSLocalizedString("Success", comment: ""),
-                               message: NSLocalizedString("Transaction was sent", comment:""), preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: NSLocalizedString("Success", comment: ""), message: NSLocalizedString("Transaction was sent", comment:""), preferredStyle: UIAlertController.Style.alert)
                                self.present(alert, animated: true, completion: nil)
                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             } else {
-                let alert = UIAlertController(title: NSLocalizedString("Error", comment: ""),
+                if !message.isEmpty {
+                    let alert = UIAlertController(title: NSLocalizedString("Error", comment: ""),
+                                message: NSLocalizedString(message, comment:""), preferredStyle: UIAlertController.Style.alert)
+                                self.present(alert, animated: true, completion: nil)
+                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                } else {
+                    let alert = UIAlertController(title: NSLocalizedString("Error", comment: ""),
                                message: NSLocalizedString("Could not validate the transaction. Do you have enough founds? Is another transaction pending?", comment:""), preferredStyle: UIAlertController.Style.alert)
                                self.present(alert, animated: true, completion: nil)
                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                }
             }
         }
     }
