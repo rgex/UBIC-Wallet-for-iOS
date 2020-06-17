@@ -132,6 +132,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         UserDefaults.standard.set(try? PropertyListEncoder().encode(balance.amount.amount), forKey:"balance_amount")
         
         DispatchQueue.main.async {
+            if(!success) { // if the block explorer is down
+                self.emptyWalletTextView.text = "Server error, please try again later :-/"
+                self.registerPassportButton.isHidden = true
+                self.activityIndicator.isHidden = true
+                self.emptyWalletMessageView.isHidden = false
+                self.BalanceCollectionView.reloadData()
+                return
+            }
             if let balance = self.balance {
                 if balance.amount.amount.count > 3 {
                     self.balancePageController.isHidden = false

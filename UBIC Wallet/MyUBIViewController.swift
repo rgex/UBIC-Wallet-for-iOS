@@ -74,7 +74,15 @@ class MyUBIViewController: UIViewController, UICollectionViewDataSource, UIColle
         print("Completed balance")
         
         DispatchQueue.main.async {
-            if self.isReceivingUBI(balance: balance) {
+            if(!success) { // if the block explorer is down
+                self.ubiStatusLabel.text = "Server error, please try again later :-/"
+                self.passportsLabel.isHidden = true
+                self.registeredPassportsCollectionView.dataSource = self
+                self.registeredPassportsCollectionView.reloadData()
+                UIView.setAnimationsEnabled(false)
+                UIView.setAnimationsEnabled(true)
+            } else {
+                if self.isReceivingUBI(balance: balance) {
                     self.passportsLabel.isHidden = false
                     self.registeredPassportsCollectionView.dataSource = self
                     self.registeredPassportsCollectionView.reloadData()
@@ -87,7 +95,7 @@ class MyUBIViewController: UIViewController, UICollectionViewDataSource, UIColle
                     UIView.setAnimationsEnabled(false)
                     UIView.setAnimationsEnabled(true)
                 }
-            
+            }
             self.activityIndicator.isHidden = true
             self.loadingView.isHidden = true
         }
