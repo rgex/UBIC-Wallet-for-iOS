@@ -126,7 +126,7 @@ class SendViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             let readableAddress = self.recipientAddressTextField.text
             let currency = CurrencyFormatter.getcurrencyIdFromCode(currencyPickerCurrentCurrency)
             let amountString = self.amountTextField.text ?? "0"
-            var amount:Double = Double(amountString) ?? 0
+            let amount:Double = Double(amountString) ?? 0
             var fee:UInt64 = 0
             
             if let readableAddress = self.recipientAddressTextField.text {

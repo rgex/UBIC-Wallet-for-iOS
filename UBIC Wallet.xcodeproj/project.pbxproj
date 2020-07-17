@@ -960,7 +960,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "UBIC Wallet/UBIC Wallet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = U7TB656498;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "UBIC Wallet/Info.plist";
@@ -972,7 +972,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenSSL/lib",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "ubic.UBIC-Wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UBIC Wallet/UBICcpp/UBIC Wallet-Bridging-Header.h";
@@ -989,7 +989,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "UBIC Wallet/UBIC Wallet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = U7TB656498;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "UBIC Wallet/Info.plist";
@@ -1001,7 +1001,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenSSL/lib",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "ubic.UBIC-Wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UBIC Wallet/UBICcpp/UBIC Wallet-Bridging-Header.h";

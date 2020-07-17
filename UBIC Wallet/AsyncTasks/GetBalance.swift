@@ -92,6 +92,7 @@ class GetBalance {
         print("getBalance: \(address)")
         //let url = URL(string: baseUrl + "/api/addresses/qVzfuP4vT7cPbYW9rR4EWGMY6GYBVKKKJ")!
         let url = URL(string:  ServerSelector.getBaseUrl() + "/api/addresses/" + address)!
+        //let url = URL(string:  ServerSelector.getBaseUrl() + "/api/addresses/qa18eqP5ZQQ1MU3rvDhgPe3VjWzmKABzU")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
